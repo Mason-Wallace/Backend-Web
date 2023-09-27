@@ -1,10 +1,9 @@
 from app import app
 import datetime
-from flask import Flask
 
 if __name__ == '__main__':
     with app.test_client() as client:
-        date = datetime.datetime.today
+        date = datetime.datetime.today()
         second = str(date.second).encode('utf-8')
         hour = str(date.hour).encode('utf-8')
         year = str(date.year).encode('utf-8')
